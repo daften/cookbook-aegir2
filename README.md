@@ -12,7 +12,6 @@ Requirements
 
 ## Cookbooks:
 
-* apt (to update the package repositories)
 * mysql (to install mysql-server properly)
 
 ## Platforms
@@ -30,11 +29,13 @@ Usage
 -----
 Simply include the default recipe to get aegir2 installed with the default package-based method. Different install methods and servers will be supported in future versions. You can set a custom admin email and frontend URL by using attributes.
 
+You will most likely need to run the apt::default recipe before this cookbook can be used.
+
 ### Usage in roles:
 ```ruby
 name "aegir2"
 description "aegir2 role"
-run_list "recipe[aegir2::default]"
+run_list "recipe[apt::default],recipe[aegir2::default]"
 default_attributes "aegir2" => {
   "admin_email" => "another@email.please"
 }

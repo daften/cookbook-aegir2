@@ -14,6 +14,6 @@ recipe           "aegir2::mysql_secure", "Secure mysql installation"
   supports os
 end
 
-%w{ apt mysql }.each do |cb|
+%w{ mysql }.each do |cb|
   depends cb
 end
