@@ -2,5 +2,5 @@ aegir2-hostmaster     aegir/db_password   password <%= node['mysql']['server_roo
 aegir2-hostmaster     aegir/db_user       string root
 aegir2-hostmaster     aegir/email         string <%= node['aegir2']['admin_email'] %>
 aegir2-hostmaster     aegir/db_host       string localhost
-aegir2-hostmaster     aegir/site          string <%= node['aegir2']['frontend'] %>
+aegir2-hostmaster     aegir/site          string <%= node['fqdn'] %>
 aegir2-hostmaster     aegir/webserver     select <%= node['aegir2']['webserver'] %>
