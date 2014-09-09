@@ -1,4 +1,5 @@
 default[:aegir2][:install_method] = "package"
+default[:aegir2][:install_folder] = "/var/aegir"
 
 # Attributes needed for both install methods
 default[:aegir2][:frontend] = "localhost"
