@@ -25,6 +25,41 @@ Attributes
 * `node['aegir2']['admin_email']` - The admin email for the aegir site
 * `node['aegir2']['webserver']` - The web server aegir should use.
 
+Resources/Providers
+-------------------
+### `aegir2_extension`
+This LWRP provides an easy way to manage aegir2 extensions
+
+#### Actions
+- :add: Adds the extension to aegir
+- :remove: removes the extension
+
+#### Attribute Parameters
+- name: name attribute. The name of the extension to add
+- repository_provision: the git repository for the provision module (drush extension)
+- repository_hosting: the git repository for the hosting module (drupal module)
+- version: the version to used. Should be a git tag that is on the provision and hosting module
+
+#### Examples
+
+Add the tasks_extra extension:
+
+```ruby
+aegir2_extension 'tasks_extra' do
+  repository_provision 'http://git.drupal.org/project/provision_tasks_extra.git'
+  repository_hosting 'http://git.drupal.org/project/hosting_tasks_extra.git'
+  version '6.x-2.1'
+end
+```
+
+Remove the tasks_extra extension:
+
+```ruby
+aegir2_extension 'tasks_extra' do
+  action :remove
+end
+```
+
 Usage
 -----
 Simply include the default recipe to get aegir2 installed with the default package-based method. Different install methods and servers will be supported in future versions. You can set a custom admin email and frontend URL by using attributes.
