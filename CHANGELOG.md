@@ -3,7 +3,16 @@ aegir2 CHANGELOG
 
 This file is used to list changes made in each version of the aegir2 cookbook.
 
-0.1.0 (2014-06-25)
+0.1.3 (2014-09-08)
+------------------
+- Dieter Blomme - Add LWRP for aegir2 extensions
+
+0.1.2 (2014-08-26)
+------------------
+- Dieter Blomme - Fixed a bug with the hostname
+- Dieter Blomme - Add berkshelf file (+ Gemfile and Thorfile)
+
+0.1.1 (2014-06-25)
 ------------------
 - Dieter Blomme - Fixed a bug with the template file, wrong keys were used.
 
