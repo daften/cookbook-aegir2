@@ -3,6 +3,10 @@ aegir2 CHANGELOG
 
 This file is used to list changes made in each version of the aegir2 cookbook.
 
+0.1.4 (2014-09-11)
+------------------
+- Dieter Blomme - Add recipe to add extensions by using a variable
+
 0.1.3 (2014-09-08)
 ------------------
 - Dieter Blomme - Add LWRP for aegir2 extensions

@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: aegir2
-# Recipe:: default
+# Recipe:: extensions
 #
 # Author:: Dieter Blomme <dieterblomme@gmail.com>
 #
@@ -19,5 +19,12 @@
 # limitations under the License.
 #
 
-include_recipe "aegir2::#{node['aegir2']['install_method']}"
-include_recipe "aegir2::extensions"
+if !node['aegir2']['extensions'].nil? && !node['aegir2']['extensions'].empty?
+  node['aegir2']['extensions'].each do |extension_name, extension|
+    aegir2_extension extension_name do
+      repository_provision extension['repository_provision']
+      repository_hosting extension['repository_hosting']
+      version extension['version']
+    end
+  end
+end
