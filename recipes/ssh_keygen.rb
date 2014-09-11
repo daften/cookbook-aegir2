@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: aegir2
-# Recipe:: ssh_key
+# Recipe:: ssh_keygen
 #
 # Author:: Dieter Blomme <dieterblomme@gmail.com>
 #
@@ -27,6 +27,7 @@ directory node['aegir2']['install_folder'] + '/.ssh' do
   group     "aegir"
   mode      '0755'
   recursive true
+  only_if { Dir.exists?(node['aegir2']['install_folder']) }
 end
 
 fqdn, my_home = node['fqdn'], node['aegir2']['install_folder']
@@ -39,8 +40,8 @@ e = execute "create ssh keypair for aegir" do
     chmod 0600 #{my_home}/.ssh/id_dsa
     chmod 0644 #{my_home}/.ssh/id_dsa.pub
   KEYGEN
-  action    :nothing
+  action    :run
 
   creates   "#{my_home}/.ssh/id_dsa"
+  only_if { Dir.exists?(node['aegir2']['install_folder']) }
 end
-e.run_action(:run)
