@@ -31,7 +31,7 @@ end
 
 fqdn, my_home = node['fqdn'], node['aegir2']['install_folder']
 e = execute "create ssh keypair for aegir" do
-  cwd       "#{node['aegir2']['install_folder']}"
+  cwd       node['aegir2']['install_folder']
   user      "aegir"
   command   <<-KEYGEN.gsub(/^ +/, '')
     ssh-keygen -t dsa -f #{my_home}/.ssh/id_dsa -N '' \
