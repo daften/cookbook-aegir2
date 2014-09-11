@@ -21,3 +21,4 @@
 
 include_recipe "aegir2::#{node['aegir2']['install_method']}"
 include_recipe "aegir2::extensions"
+include_recipe "aegir2::ssh_keygen"
