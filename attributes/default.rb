@@ -1,7 +1,7 @@
-default[:aegir2][:install_method] = "package"
-default[:aegir2][:install_folder] = "/var/aegir"
+default["aegir2"]["install_method"] = "package"
+default["aegir2"]["install_folder"] = "/var/aegir"
 
 # Attributes needed for both install methods
-default[:aegir2][:frontend] = "localhost"
-default[:aegir2][:admin_email] = "webmaster@localhost"
-default[:aegir2][:webserver] = "apache2"
+default["aegir2"]["frontend"] = "localhost"
+default["aegir2"]["admin_email"] = "webmaster@localhost"
+default["aegir2"]["webserver"] = "apache2"

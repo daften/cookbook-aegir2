@@ -26,5 +26,5 @@ end
 
 cookbook_file "/tmp/mysql_secure_installation.sql" do
   source "mysql_secure_installation.sql"
-  notifies :run, resources(:execute => "Secure MySQL Installation"), :immediately
+  notifies :run, "execute[Secure MySQL Installation]", :immediately
 end

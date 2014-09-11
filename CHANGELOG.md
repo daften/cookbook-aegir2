@@ -6,6 +6,7 @@ This file is used to list changes made in each version of the aegir2 cookbook.
 0.1.4 (2014-09-11)
 ------------------
 - Dieter Blomme - Add recipe to add extensions by using a variable
+- Dieter Blomme - Foodcritic fixes
 
 0.1.3 (2014-09-08)
 ------------------

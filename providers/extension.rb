@@ -60,6 +60,7 @@ action :remove do
       recursive true
       action :delete
     end
+    new_resource.updated_by_last_action(true)
   end
   if !new_resource.repository_hosting.nil?
     loc = Mixlib::ShellOut.new('drush site-alias @hostmaster --component="site_path"',
@@ -70,5 +71,6 @@ action :remove do
       recursive true
       action :delete
     end
+    new_resource.updated_by_last_action(true)
   end
 end
