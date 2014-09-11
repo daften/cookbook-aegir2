@@ -10,6 +10,7 @@ recipe           "aegir2::package", "Install aegir from package"
 recipe           "aegir2::script", "Install aegir with nginx and php-fpm"
 recipe           "aegir2::mysql_secure", "Secure mysql installation"
 recipe           "aegir2::extensions", "Install extensions based on attributes"
+recipe           "aegir2::ssh_keygen", "Generate DSA key pair for the aegir user"
 
 %w{ debian ubuntu }.each do |os|
   supports os

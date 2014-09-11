@@ -3,6 +3,10 @@ aegir2 CHANGELOG
 
 This file is used to list changes made in each version of the aegir2 cookbook.
 
+0.1.5 (2014-09-11)
+------------------
+- Dieter Blomme - Add ssh_keygen recipe to have a key for the aegir user created
+
 0.1.4 (2014-09-11)
 ------------------
 - Dieter Blomme - Add recipe to add extensions by using a variable
