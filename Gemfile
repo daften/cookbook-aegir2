@@ -14,3 +14,7 @@ gem 'berkshelf'
 #   gem "vagrant-omnibus", github: "schisamo/vagrant-omnibus"
 # end
 
+group :unit do
+  gem 'foodcritic'
+end
+
