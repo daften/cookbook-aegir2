@@ -16,6 +16,4 @@ recipe           "aegir2::ssh_keygen", "Generate DSA key pair for the aegir user
   supports os
 end
 
-%w{ mysql }.each do |cb|
-  depends cb
-end
+depends "mysql", "< 6.0.0"
