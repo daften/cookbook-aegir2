@@ -6,6 +6,7 @@ This file is used to list changes made in each version of the aegir2 cookbook.
 0.1.6 (2014-12-28)
 ------------------
 - Dieter Blomme - Update the dependency on mysql cookbook so the server recipe exists.
+- Dieter Blomme - Add the apt dependency for apt_repository.
 
 0.1.5 (2014-09-11)
 ------------------
