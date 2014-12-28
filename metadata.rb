@@ -16,4 +16,5 @@ recipe           "aegir2::ssh_keygen", "Generate DSA key pair for the aegir user
   supports os
 end
 
+depends "apt"
 depends "mysql", "< 6.0.0"
