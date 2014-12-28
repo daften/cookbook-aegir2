@@ -35,4 +35,13 @@ when 'debian'
     response_file 'aegir2.seed.erb'
     action :install
   end
+
+  # Provide the option to manipulate php.ini
+  include_recipe 'php::ini'
+
+  # Restart apache for php.ini changes to take effect
+  service "apache2" do
+    supports :restart => true, :reload => true
+    action :reload
+  end
 end

@@ -4,7 +4,7 @@ maintainer_email 'info@picabit.be'
 license          'Apache 2.0'
 description      'Hosting System for Drupal Sites'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.6'
+version          '0.1.7'
 recipe           "aegir2", "Install aegir with the chosen method (default: package)"
 recipe           "aegir2::package", "Install aegir from package"
 recipe           "aegir2::script", "Install aegir with nginx and php-fpm"
@@ -17,4 +17,5 @@ recipe           "aegir2::ssh_keygen", "Generate DSA key pair for the aegir user
 end
 
 depends "apt"
+depends "php"
 depends "mysql", "< 6.0.0"

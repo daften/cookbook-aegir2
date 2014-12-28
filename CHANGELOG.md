@@ -3,6 +3,11 @@ aegir2 CHANGELOG
 
 This file is used to list changes made in each version of the aegir2 cookbook.
 
+0.1.7 (2014-12-28)
+------------------
+- Dieter Blomme - Allow php.ini overrides
+- Dieter Blomme - Use 256M as the default memory_limit
+
 0.1.6 (2014-12-28)
 ------------------
 - Dieter Blomme - Use a rakefile for travis testing (foodcritic only ATM)
