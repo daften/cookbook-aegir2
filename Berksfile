@@ -1,6 +1,3 @@
 source "https://supermarket.getchef.com"
 
-metadata
-
-cookbook "apt"
-cookbook "mysql", "< 6.0.0"
+metadata   # This makes sure the metadata.rb file is used

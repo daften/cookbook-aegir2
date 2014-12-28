@@ -5,6 +5,8 @@ This file is used to list changes made in each version of the aegir2 cookbook.
 
 0.1.6 (2014-12-28)
 ------------------
+- Dieter Blomme - Use a rakefile for travis testing (foodcritic only ATM)
+- Dieter Blomme - Add the basics for kitchen testing
 - Dieter Blomme - Update the dependency on mysql cookbook so the server recipe exists.
 - Dieter Blomme - Add the apt dependency for apt_repository.
 
