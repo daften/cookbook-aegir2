@@ -30,6 +30,13 @@ when 'debian'
 
   include_recipe 'mysql::server'
   include_recipe 'aegir2::mysql_secure'
+  include_recipe 'mysql_tuning::default'
+
+  # Restart MySQL to take changed config into account.
+  service "mysql" do
+    supports :restart => true, :reload => true
+    action :restart
+  end
 
   package 'aegir2' do
     response_file 'aegir2.seed.erb'

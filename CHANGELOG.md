@@ -3,6 +3,11 @@ aegir2 CHANGELOG
 
 This file is used to list changes made in each version of the aegir2 cookbook.
 
+0.1.8 (2014-12-29)
+------------------
+- Dieter Blomme - Allow my.cnf overrides
+- Dieter Blomme - Use 16M as the default max_allowed_packet
+
 0.1.7 (2014-12-28)
 ------------------
 - Dieter Blomme - Allow php.ini overrides
