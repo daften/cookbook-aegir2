@@ -11,14 +11,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
-  config.vm.hostname = 'aegir2-berkshelf'
+  config.vm.hostname = 'localhost'
 
   # Set the version of chef to install using the vagrant-omnibus plugin
   # NOTE: You will need to install the vagrant-omnibus plugin:
   #
   #   $ vagrant plugin install vagrant-omnibus
   #
-  if Vagrant.has_plugin?
+  if Vagrant.has_plugin?("vagrant-omnibus")
     config.omnibus.chef_version = 'latest'
   end
 
@@ -37,6 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
+  config.vm.network :forwarded_port, guest: 80, host: 80
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -84,6 +85,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
 
     chef.run_list = [
+      'recipe[apt::default]',
       'recipe[aegir2::default]'
     ]
   end
