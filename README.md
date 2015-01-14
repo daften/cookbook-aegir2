@@ -7,6 +7,10 @@ specifically for aegir2.
 
 This cookbook was started as a fork of https://github.com/yevgenko/cookbook-aegir, but was so different, I created a new repository. Thanks for yevgenko for the inspiration!
 
+IMPORTANT!!!
+Install fails, see the corresponding issue to fix this manually while waiting 
+for a new aegir2 release: https://www.drupal.org/node/2275467
+
 Requirements
 ------------
 
@@ -76,12 +80,35 @@ default_attributes "aegir2" => {
 }
 ```
 
+Local setup
+-------------------
+
+You can easily test this cookbook locally, by installing the following toolchain:
+* [VirtualBox](https://www.virtualbox.org/)
+* [Vagrant](https://www.vagrantup.com/)
+* [Chef Development Kit](https://downloads.chef.io/chef-dk/)
+* [Vagrant Berkshelf Plugin](https://github.com/berkshelf/vagrant-berkshelf)
+
+When the above dependencies are installed, you can test this cookbook easily by simply issuing `vagrant up`.
+
+Testing
+-------------------
+
+The cookbook is testable with kitchen and foodcritic. The basic tests can be run through rake.
+
+By issuing `bundle exec rake`, foodcritic tests are run.
+
+By issuing `kitchen test`, the cookbook is used on Ubuntu-14.04 and CentOS-7.0.
+
 Contributing
 ------------
 Contributions can be made by using the GitHub Pull Request system.
 
+## License and Authors
+
+Author:: Dieter Blomme (dieterblomme@gmail.com)
+
 License and Authors
--------------------
 
 * Author:: Dieter Blomme (dieterblomme@gmail.com
 
