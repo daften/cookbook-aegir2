@@ -4,3 +4,5 @@ rvm:
 bundler_args: --without integration development
 script:
   - bundle exec rake travis
+notifications:
+  hipchat: 4El2T9XbT3v0ywXUA5uWNjvWHvb1tVWPjgDWx8HQ@1325538
